@@ -27,7 +27,7 @@ export class LoggingService {
     }
   };
 
-  getLogger = (moduleName: string): Logger => {
+  public getLogger = (moduleName: string): Logger => {
     return createLogger({
       level: config.loggerLogLevel,
       format: format.combine(
