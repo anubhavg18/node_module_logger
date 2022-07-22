@@ -1,2 +1,2 @@
-import { getLogger, Logger } from './logging';
-export { getLogger, Logger };
+import { LoggingService } from './logging.service';
+export { LoggingService };

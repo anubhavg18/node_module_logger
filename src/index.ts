@@ -1,3 +1,3 @@
-import { getLogger, Logger } from './logging';
+import { LoggingService } from './logging.service';
 
-export { getLogger, Logger };
+export { LoggingService };
