@@ -1,5 +1,4 @@
 import { createLogger, format, transports, Logger } from 'winston';
-import * as config from './config';
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
@@ -29,7 +28,7 @@ export class LoggingService {
 
   public getLogger = (moduleName: string): Logger => {
     return createLogger({
-      level: config.loggerLogLevel,
+      level: 'info',
       format: format.combine(
         format.label({ label: moduleName }),
         format.timestamp({
@@ -37,9 +36,9 @@ export class LoggingService {
         }),
         format.errors({ stack: true }),
         format.splat(),
-        this.getLogStyle(config.loggerLogStyle),
+        this.getLogStyle('cli'),
       ),
-      defaultMeta: { service: config.appName },
+      defaultMeta: { service: 'Saudi Airlines Managed Services' },
       transports: [new transports.Console()],
     });
   };

@@ -11,7 +11,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.LoggingService = void 0;
 const winston_1 = require("winston");
-const config = require("./config");
 const common_1 = require("@nestjs/common");
 let LoggingService = class LoggingService {
     constructor() {
@@ -32,11 +31,11 @@ let LoggingService = class LoggingService {
         };
         this.getLogger = (moduleName) => {
             return (0, winston_1.createLogger)({
-                level: config.loggerLogLevel,
+                level: 'info',
                 format: winston_1.format.combine(winston_1.format.label({ label: moduleName }), winston_1.format.timestamp({
                     format: 'YYYY-MM-DD HH:mm:ss',
-                }), winston_1.format.errors({ stack: true }), winston_1.format.splat(), this.getLogStyle(config.loggerLogStyle)),
-                defaultMeta: { service: config.appName },
+                }), winston_1.format.errors({ stack: true }), winston_1.format.splat(), this.getLogStyle('cli')),
+                defaultMeta: { service: 'Saudi Airlines Managed Services' },
                 transports: [new winston_1.transports.Console()],
             });
         };
