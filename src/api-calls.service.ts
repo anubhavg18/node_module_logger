@@ -7,7 +7,7 @@ export class ApiCallsService {
   constructor(private configservice: ConfigService) { }
   // It will call the all request from 3rd party apis
 
-  getData(config: any) {
+  public getData = (config: any) => {
     if (config && config.headers) {
       config.headers['Ocp-Apim-Subscription-Key'] = this.configservice.getConfigConstantValue('baseUrlKey');
       config.headers['Ocp-Apim-Trace'] = true;

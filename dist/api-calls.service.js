@@ -16,19 +16,19 @@ const config_service_1 = require("./config.service");
 let ApiCallsService = class ApiCallsService {
     constructor(configservice) {
         this.configservice = configservice;
-    }
-    getData(config) {
-        if (config && config.headers) {
-            config.headers['Ocp-Apim-Subscription-Key'] = this.configservice.getConfigConstantValue('baseUrlKey');
-            config.headers['Ocp-Apim-Trace'] = true;
-        }
-        return (0, axios_1.default)(config)
-            .then(function (response) {
-            return response.data;
-        })
-            .catch(function (error) {
-            throw error.response;
-        });
+        this.getData = (config) => {
+            if (config && config.headers) {
+                config.headers['Ocp-Apim-Subscription-Key'] = this.configservice.getConfigConstantValue('baseUrlKey');
+                config.headers['Ocp-Apim-Trace'] = true;
+            }
+            return (0, axios_1.default)(config)
+                .then(function (response) {
+                return response.data;
+            })
+                .catch(function (error) {
+                throw error.response;
+            });
+        };
     }
 };
 ApiCallsService = __decorate([
