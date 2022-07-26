@@ -1,0 +1,1 @@
+{"version":3,"file":"custom-exception.js","sourceRoot":"","sources":["../../src/errorhelper/custom-exception.ts"],"names":[],"mappings":";;;AAAA,2CAA4C;AAC5C,qDAAiD;AAGjD,MAAa,eAAgB,SAAQ,8BAAa;IAChD,YAAmB,KAAe;QAChC,KAAK,CAAC,KAAK,EAAE,mBAAU,CAAC,WAAW,CAAC,CAAC;QADpB,UAAK,GAAL,KAAK,CAAU;IAElC,CAAC;CACF;AAJD,0CAIC"}

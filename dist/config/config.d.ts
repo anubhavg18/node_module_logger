@@ -1,0 +1,11 @@
+export declare const appName: string;
+export declare const appVersion: string;
+export declare const port: string;
+export declare const mongoUri: string;
+export declare const awsS3Endpoint: string;
+export declare const awsS3AccessKey: string;
+export declare const awsS3SecretAccessKey: string;
+export declare const awsS3BucketName: string;
+export declare const awsRegion: string;
+export declare const loggerLogLevel = "info";
+export declare const loggerLogStyle = "cli";
