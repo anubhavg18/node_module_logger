@@ -11,7 +11,7 @@ export class ConfigService {
     appVersion: this.azureService.getAzureConfigValue('appVersion'),
     port: this.azureService.getAzureConfigValue('appid'),
 
-    baseUrl: 'https://apim-sa-sandbox.azure-api.net/amadeus/airsearch/',
+    baseUrl: 'https://apim-sa-sandbox.azure-api.net/amadeus/',
     baseUrlKey: 'a77c1c8017f74251910fdf76155179f4',
   };
 
