@@ -33,7 +33,7 @@ const getLogger = (moduleName: string): Logger => {
       format.splat(),
       getLogStyle('cli'),
     ),
-    defaultMeta: { service: 'Saudi Airlines Managed Services' },
+    defaultMeta: { service: 'Saudia Airlines Managed Services' },
     transports: [new transports.Console()],
   });
 };
