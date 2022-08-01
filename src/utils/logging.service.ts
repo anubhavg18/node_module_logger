@@ -1,5 +1,4 @@
 import { createLogger, format, transports, Logger } from 'winston';
-import * as config from '../config/config';
 
 const printFormat = (info: any): string => {
   let result = `${info.timestamp} ${info.level} [${info.label}]: ${info.message}`;
@@ -24,7 +23,7 @@ const getLogStyle = (logStyle: string): any => {
 
 const getLogger = (moduleName: string): Logger => {
   return createLogger({
-    level: config.loggerLogLevel,
+    level: 'info',
     format: format.combine(
       format.label({ label: moduleName }),
       format.timestamp({
@@ -32,9 +31,9 @@ const getLogger = (moduleName: string): Logger => {
       }),
       format.errors({ stack: true }),
       format.splat(),
-      getLogStyle(config.loggerLogStyle),
+      getLogStyle('cli'),
     ),
-    defaultMeta: { service: config.appName },
+    defaultMeta: { service: 'Saudi Airlines Managed Services' },
     transports: [new transports.Console()],
   });
 };
